@@ -1,0 +1,239 @@
+:root {
+    --bg-color: #202124;
+    --text-color: #e8eaed;
+    --card-bg: #3c4043;
+    --accent-color: #8ab4f8;
+    --border-color: #5f6368;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #202124;
+    --card-bg: #f1f3f4;
+    --accent-color: #1a73e8;
+    --border-color: #dadce0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    width: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.container {
+    padding: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.tab-btn:first-child { border-radius: 8px 0 0 8px; }
+.tab-btn:last-child { border-radius: 0 8px 8px 0; }
+.tab-btn:not(:last-child) { border-right: none; }
+
+.tab-btn.active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.stat-card .label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.stat-card .value {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 12px 0;
+    color: var(--text-color);
+}
+
+.chart-container {
+    background-color: var(--card-bg);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#search-websites, #sort-by {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+}
+#sort-by { flex-shrink: 0; width: auto; }
+
+#website-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.website-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.website-item:hover {
+    background-color: #555;
+}
+
+body.light-mode .website-item:hover {
+    background-color: #e0e0e0;
+}
+
+.website-info .hostname {
+    font-weight: 500;
+}
+
+.website-info .last-visited {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.website-time {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover, .close-btn:focus { color: var(--text-color); }
+
+footer {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}

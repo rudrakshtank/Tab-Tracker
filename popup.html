@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Time Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tab Tracker</h1>
+            <button id="theme-toggle">🌙</button>
+        </header>
+
+        <nav>
+            <button class="tab-btn active" data-tab="today">Today</button>
+            <button class="tab-btn" data-tab="last7days">Last 7 Days</button>
+        </nav>
+
+        <main>
+            <div id="today" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="label">Total Time Today</span>
+                        <span id="total-time-today" class="value">0m 0s</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="label">Sites Visited</span>
+                        <span id="sites-visited-today" class="value">0</span>
+                    </div>
+                </div>
+
+                <div class="section-title">Today's Top Sites</div>
+                <div class="chart-container">
+                    <canvas id="today-chart"></canvas>
+                </div>
+
+                <div class="section-title">All Websites</div>
+                <div class="controls">
+                    <input type="text" id="search-websites" placeholder="Search websites...">
+                    <select id="sort-by">
+                        <option value="time-desc">Time (Highest first)</option>
+                        <option value="time-asc">Time (Lowest first)</option>
+                        <option value="alpha-asc">Alphabetical (A-Z)</option>
+                        <option value="alpha-desc">Alphabetical (Z-A)</option>
+                    </select>
+                </div>
+                <div id="website-list-container"></div>
+            </div>
+
+            <div id="last7days" class="tab-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="label">Average Daily</span>
+                        <span id="average-daily" class="value">0h 0m</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="label">Most Active Day</span>
+                        <span id="most-active-day" class="value">-</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="last7-chart"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <span id="last-updated"></span>
+        </footer>
+    </div>
+
+    <div id="site-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div class="chart-container">
+                <canvas id="site-detail-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/chart.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
