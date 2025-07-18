@@ -5,7 +5,7 @@ This is a Website Time Tracker extension with the following features:
 - A 7-day history 
 - Combined today's chart and website list in a single tab
 
-## Installation Instructions:
+## 📥 Installation Instructions:
 
 1. Download Chart.js library from https://cdn.jsdelivr.net/npm/chart.js and all the files of this repository
 2. Save it as `lib/chart.min.js` in the extension folder
