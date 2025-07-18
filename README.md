@@ -1,4 +1,4 @@
-# Website Time Tracker Extension (7 Days)
+#Tab Tracker Extension
 
 This is a modified version of the Website Time Tracker extension with the following changes:
 - Removed the "Website List" tab
