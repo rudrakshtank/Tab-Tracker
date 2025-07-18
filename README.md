@@ -1,5 +1,7 @@
 # Tab Tracker Extension
 
+It is a minimal Chrome extension that monitors how much time you spend on each website, helping you identify distractions and stay productive throughout the day.
+
 ## ✨ Features
 - Websites used today
 - A 7-day history 
