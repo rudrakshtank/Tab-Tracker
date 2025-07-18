@@ -20,7 +20,7 @@ This is a Website Time Tracker extension with the following features:
 - popup.css - Styling for the interface
 - popup.js - Frontend JavaScript logic
 - icons - Extension icons (basic placeholders)
-- lib/ - Chart.js library location (you need to download Chart.js)
+- chart.min.js - Chart.js library (you need to download Chart.js)
 
 ## Note about Chart.js:
 **You need to download Chart.js (chart.min.js) from the official CDN and place it in the lib/ folder for the charts to work properly.**
