@@ -15,14 +15,17 @@ It is a minimal Chrome extension that monitors how much time you spend on each w
 4. Enable "Developer mode"
 5. Click "Load unpacked" and select this folder
 
-## Files included:
-- manifest.json - Extension configuration
-- background.js - Background service worker for time tracking
-- popup.html - Extension popup interface
-- popup.css - Styling for the interface
-- popup.js - Frontend JavaScript logic
-- icons - Extension icons (basic placeholders)
-- chart.min.js - Chart.js library (you need to download Chart.js)
+## 📁 Files Included
+
+| File | Description |
+|------|-------------|
+| `background.js` | Background script that tracks tab activity and website usage time. |
+| `chart.min.js` | Minified Chart.js library used to visualize usage statistics. |
+| `icon16.png`, `icon48.png` | Icons used for the extension in toolbar and menus. |
+| `manifest.json` | Defines the extension's configuration, permissions, and scripts. |
+| `popup.html` | Structure of the popup interface displayed on clicking the extension. |
+| `popup.css` | Stylesheet that defines the appearance of the popup UI. |
+| `popup.js` | Controls the logic and data rendering in the popup, including charts. |
 
 ## Note about Chart.js:
 **You need to download Chart.js (chart.min.js) from the official CDN and place it in the lib/ folder for the charts to work properly.**
