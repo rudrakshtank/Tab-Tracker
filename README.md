@@ -1,9 +1,9 @@
 # Tab Tracker Extension
 
-This is a Website Time Tracker extension with the following features:
-- Website list used today
+## ✨ Features
+- Websites used today
 - A 7-day history 
-- Combined today's chart and website list in a single tab
+- Combined today's usage chart and website list (with individual chart)
 
 ## 📥 Installation Instructions:
 
